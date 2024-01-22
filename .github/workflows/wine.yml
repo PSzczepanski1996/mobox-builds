@@ -24,7 +24,7 @@ jobs:
         ls -a
         cp ../patches/wine90.patch ./wine90.patch
         ls -a
-        cd wine-src & patch -p 1 -i ../wine90.patch & cd ..
+        cd wine-src & patch -p 1 -i ../../patches/wine90.patch & cd ..
         ls -a
         chmod +x build_wine.sh && ./build_wine.sh
         ls -a
