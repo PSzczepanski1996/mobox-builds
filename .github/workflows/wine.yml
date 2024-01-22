@@ -1,0 +1,22 @@
+name: OSDev CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Build and test mobox
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build mobox
+      run: |
+        apt-get -y install wget git autoconf
+        git clone https://github.com/Kron4ek/Wine-Builds.git wine-builds
+        cd wine-builds
+        git clone https://github.com/wine-mirror/wine.git
+        cd wine && git checkout stable && cd ..
