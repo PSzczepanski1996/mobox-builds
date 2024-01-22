@@ -24,8 +24,8 @@ jobs:
         cd ..
         chmod +x create_ubuntu_bootstraps.sh & sudo ./create_ubuntu_bootstraps.sh
         chmod +x build_wine.sh && ./build_wine.sh
-    - name: Archive code coverage results
-      uses: actions/upload-artifact@v4
+    - uses: actions/upload-artifact@v4
+      name: Archive code coverage results
       with:
         name: code-coverage-report
         path: ./wine-builds/*.tar.xz
