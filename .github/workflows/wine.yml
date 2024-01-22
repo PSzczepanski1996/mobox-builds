@@ -16,7 +16,7 @@ jobs:
     - name: Build mobox
       run: |
         sudo apt-get -y install wget git autoconf debootstrap perl bubblewrap 
-        git clone https://github.com/Kron4ek/Wine-Builds.git wine-builds
+        https://github.com/PSzczepanski1996/Wine-Builds.git wine-builds
         cd wine-builds
         git clone https://github.com/wine-mirror/wine.git wine-src
         cd wine-src && git checkout stable
