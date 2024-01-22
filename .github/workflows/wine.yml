@@ -19,9 +19,9 @@ jobs:
         git clone https://github.com/Kron4ek/Wine-Builds.git wine-builds
         cd wine-builds
         git clone https://github.com/wine-mirror/wine.git wine-src
-        cd wine-src && git checkout stable && cd ..
-        cp ../patches/wine90.patch ./wine90.patch
+        cd wine-src && git checkout stable
         patch -p 1 -i $GITHUB_WORKSPACE/patches/wine90.patch
+        cd ..
         chmod +x build_wine.sh && ./build_wine.sh
     - name: Archive code coverage results
       uses: actions/upload-artifact@v4
