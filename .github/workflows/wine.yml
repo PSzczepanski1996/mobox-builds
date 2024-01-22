@@ -1,4 +1,4 @@
-name: OSDev CI
+name: Wine-CI
 
 on:
   push:
