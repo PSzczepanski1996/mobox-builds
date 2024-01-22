@@ -21,6 +21,7 @@ jobs:
         git clone https://github.com/wine-mirror/wine.git wine-src
         cd wine-src && git checkout stable && cd ..
         cp ../patches/wine90.patch ./wine90.patch
+        ls $HOME -a
         cd wine-src & patch -p 1 -i ../patches/wine90.patch
         cd ..
         chmod +x build_wine.sh && ./build_wine.sh
