@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build mobox
       run: |
-        sudo apt-get -y install wget git autoconf
+        sudo apt-get -y install wget git autoconf debootstrap perl 
         git clone https://github.com/Kron4ek/Wine-Builds.git wine-builds
         cd wine-builds
         git clone https://github.com/wine-mirror/wine.git wine-src
