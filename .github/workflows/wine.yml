@@ -25,7 +25,12 @@ jobs:
         chmod +x create_ubuntu_bootstraps.sh & sudo ./create_ubuntu_bootstraps.sh
         chmod +x build_wine.sh && ./build_wine.sh
     - uses: actions/upload-artifact@v4
-      name: Archive code coverage results
+      name: Upload Wine AMD64 build
       with:
-        name: code-coverage-report
-        path: ./wine-builds/*.tar.xz
+        name: wine-amd64.tar.xz
+        path: ./wine-builds/wine*amd64.tar.xz
+    - uses: actions/upload-artifact@v4
+      name: Upload Wine X86 build
+      with:
+        name: wine-x86.tar.xz
+        path: ./wine-builds/wine*x86.tar.xz
